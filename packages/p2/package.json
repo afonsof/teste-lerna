@@ -1,6 +1,6 @@
 {
   "name": "@teste-lerna/p2",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@teste-lerna/p3": "^1.0.1"
+    "@teste-lerna/p3": "^1.0.3"
   }
 }
