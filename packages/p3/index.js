@@ -1,4 +1,4 @@
 const moment = require('moment')
 module.exports = {
-    now: moment.now() + 1
+    now: moment.now() + 2
 }
