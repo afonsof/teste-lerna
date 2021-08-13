@@ -1,2 +1,2 @@
 const {nowHtml} = require("@teste-lerna/p2");
-console.log(nowHtml)
+console.log(nowHtml + 2)
