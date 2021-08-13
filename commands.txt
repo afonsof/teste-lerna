@@ -12,12 +12,24 @@ mkdir packages/p3
 
 cd packages/p1
 npm init -y
+package.json
+"publishConfig": {
+  "access": "public"
+}
 
 cd packages/p2
 npm init -y
+package.json
+"publishConfig": {
+  "access": "public"
+}
 
 cd packages/p3
 npm init -y
+package.json
+"publishConfig": {
+  "access": "public"
+}
 
 npm install --save moment
 p2 => '@teste-lerna/p3': '^1.0.0'
