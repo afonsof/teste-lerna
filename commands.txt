@@ -1,0 +1,67 @@
+lerna init
+
+mostrar
+    lerna.json
+    packages
+    package.json
+---
+
+mkdir packages/p1
+mkdir packages/p2
+mkdir packages/p3
+
+cd packages/p1
+npm init -y
+
+cd packages/p2
+npm init -y
+
+cd packages/p3
+npm init -y
+
+npm install --save moment
+p2 => '@teste-lerna/p3': '^1.0.0'
+p1 => '@teste-lerna/p2': '^1.0.0'
+lerna bootstrap
+# mostrar symlinks
+
+---
+@teste-lerna/p3/index.js
+const moment = require("moment");
+module.exports = {
+    now: moment.now().toString()
+}
+
+@teste-lerna/p2/index.js
+const {now} = require("@teste-lerna/p3");
+module.exports = {
+    now: '<div class="date">' + now + '</div>'
+}
+
+@teste-lerna/p1/index.js
+const {now} = require("p2");
+console.log(now)
+
+---
+cd p1
+npm start
+lerna run start
+
+---
+cd p1
+npm i -S typescript
+lerna link
+
+---
+lerna clean
+
+---
+commita tudo
+lerna publish
+mostrar no npm
+mostrar tags no github
+
+---
+altera só o p3
+commita tudo
+lerna publish
